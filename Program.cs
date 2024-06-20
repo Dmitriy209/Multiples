@@ -10,23 +10,19 @@ namespace Multiples
     {
         static void Main(string[] args)
         {
+            int lowLimitRandom = 10;
+            int highLimitRandom = 25;
+            
             Random random = new Random();
-            int divider = random.Next(10, 25);
+            int divider = random.Next(lowLimitRandom, highLimitRandom);
 
             int startCycle = 50;
             int endCycle = 150;
             int quantityMultiples = 0;
 
-            for (int i = startCycle; i <= endCycle; i++)
+            for (int i = 0; i <= endCycle; i += divider)
             {
-                int Multiples = i;
-
-                while (Multiples > divider)
-                {
-                    Multiples -= divider;
-                }
-
-                if (Multiples == divider)
+                if (i >= startCycle)
                 {
                     quantityMultiples++;
                 }
