@@ -10,7 +10,7 @@ namespace Multiples
             int highLimitRandom = 25;
             
             Random random = new Random();
-            int divider = random.Next(lowLimitRandom, highLimitRandom);
+            int divider = random.Next(lowLimitRandom, highLimitRandom+1);
 
             int startCycle = 50;
             int endCycle = 150;
